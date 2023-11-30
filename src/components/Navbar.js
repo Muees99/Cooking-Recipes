@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import './Navbar.css'
  
 import React from 'react'
+import SearchBar from './SearchBar'
 
 export default function Navbar() {
   return (
@@ -13,6 +14,7 @@ export default function Navbar() {
             <Link to= '/' className='brand'>
             <h1>Bibi's Cook Menu</h1>
             </Link>
+            <SearchBar/>
             <Link to='/create'>Create Recipe</Link>
 
         </nav>

@@ -1,46 +1,43 @@
- .recipes {
-    max-width: 800px; /* Reduced max-width for better readability on smaller screens */
-    margin: 40px auto;
-    text-align: center;
-    background: #f9f9f9; /* Light background color */
-    padding: 20px; /* Reduced padding for a cleaner look */
-    box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners for a softer look */
-  }
-  
+.recipes {
+  max-width: 800px;
+  margin: 80px auto 40px; /* Added bottom margin to create space between cards and navbar */
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
+.recipes ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: 20px;
+}
 
-  .recipes ul {
-    display: flex; /* Use flexbox to arrange items in a row */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-    justify-content: center;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .recipes li {
-    list-style-type: none; 
-    display: inline-block; /* Use inline-block to arrange items horizontally */
-    margin-right: 10px;
-    margin-bottom: 10px; /* Add margin bottom for spacing between items */
-    color: #444;
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-  }
-  
-  .recipes li::after {
-    content: "|"; /* Changed delimiter to a vertical line */
-    margin-left: 5px; /* Added spacing after the separator */
-  }
-  
-  .recipes li:last-child::after {
-    content: ""; /* Removed delimiter for the last item */
-  }
-  
-  .method {
-    text-align: left;
-    line-height: 1.6; /* Increased line height for readability */
-  }
-  
+.recipes li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+
+.recipes li::after {
+  content: "|";
+  margin-left: 5px;
+}
+
+.recipes li:last-child::after {
+  content: "";
+}
+
+.method {
+  text-align: left;
+  line-height: 1.6;
+}

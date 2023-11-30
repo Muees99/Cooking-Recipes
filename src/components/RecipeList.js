@@ -1,21 +1,25 @@
 import './RecipeList.css'
 import { Link } from 'react-router-dom'
 
-import React from 'react'
 
-export default function ({recipes}) {
+export default function RecipeList({ recipes }) {
+
+  if(recipes.length===0){
+    return <div className='error'>No recipes to Load</div>
+  }
   return (
-    <div className='recipe-list'>
-       {recipes.map(recipe=>(
-        <div key={recipe.id} className='card'>
-            <h3>{recipe.title}</h3>
-            <p>{recipe.cookingTime} to make.</p>
-            <div>{recipe.method.substring(0,100)}...</div>
-            <Link to={`/recipes/${recipe.id}`}>Cook This</Link>
+    <div className="recipe-list">
+      {recipes.map(recipe => (
+        <div key={recipe.id} className="card">
+          <h3>{recipe.title}</h3>
+          <p>{recipe.cookingTime} to make.</p>
+          {/* Add conditional check for recipe.method */}
+          <div>
+            {recipe.method && recipe.method.substring(0, 100) + '...'}
+          </div>
+          <Link to={`/recipes/${recipe.id}`}>Cook This</Link>
         </div>
-       ))} 
-        
+      ))}
     </div>
   )
 }
-
