@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
+// import {useHistory} from 'react-router-dom'
 import './Create.css';
 
 export default function Create() {
@@ -12,9 +13,10 @@ export default function Create() {
   const [newIngredient, setNewIngredient] = useState('');
   const [ingredients, setIngredients] = useState([]);
   const ingredientInput = useRef(null);
+  const history = useHistory()
   const navigate = useNavigate();
 
-  const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST');
+  const { postData, data,error } = useFetch('http://localhost:3000/recipes', 'POST');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,6 +37,7 @@ export default function Create() {
     // redirect User home after submission data fetch/post
     if (data) {
       navigate('/');
+      // history.push('/')
   }
   };
 
