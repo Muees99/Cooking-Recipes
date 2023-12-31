@@ -19,7 +19,9 @@ export default function ThemSelector() {
             <img 
                 onClick={toggleMode}
                 src= {modeIcon}
-                alt=''/>
+                alt='toggle icon'
+                style ={{filter: mode ==='dark'? 'invert(100%)': 'invert(20%)'}}
+            />
         </div>
         <div className="theme-buttons">
             {themeColors.map(color =>(
