@@ -44,7 +44,8 @@
 
 
 /* dark Mode */
-.recipes.dark{
+.recipes.dark,
+.recipes.dark li{
   background: #555;
   color: #e4e4e4;
 }
